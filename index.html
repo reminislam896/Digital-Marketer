@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Remin Islam — Digital Marketer, Website Creator and YouTube Expert.">
+  <title>Remin Islam | Digital Marketer & YouTube Expert</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#070912; --panel:#0d1220; --panel2:#11182a; --text:#f6f8ff; --muted:#a9b2c8;
+      --cyan:#28f0ff; --pink:#ff4fd8; --violet:#8a5cff; --line:rgba(255,255,255,.10);
+      --shadow:0 25px 80px rgba(0,0,0,.45);
+    }
+    *{box-sizing:border-box;scroll-behavior:smooth}
+    body{margin:0;background:
+      radial-gradient(circle at 15% 10%,rgba(40,240,255,.11),transparent 28%),
+      radial-gradient(circle at 85% 15%,rgba(255,79,216,.10),transparent 25%),
+      var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;line-height:1.6}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1160px,92%);margin:auto}
+    nav{position:sticky;top:0;z-index:50;background:rgba(7,9,18,.78);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+    .nav{height:74px;display:flex;align-items:center;justify-content:space-between}
+    .brand{font:700 20px "Space Grotesk";letter-spacing:.5px}.brand b{color:var(--cyan)}
+    .links{display:flex;gap:28px;color:#d7dded;font-size:14px}.links a:hover{color:var(--cyan)}
+    .menu{display:none;background:none;border:0;color:white;font-size:25px}
+    .hero{min-height:calc(100vh - 74px);display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:70px;padding:70px 0}
+    .eyebrow{display:inline-flex;gap:8px;align-items:center;border:1px solid rgba(40,240,255,.3);padding:7px 13px;border-radius:999px;background:rgba(40,240,255,.06);color:#bffaff;font-size:12px;font-weight:700;letter-spacing:.8px;text-transform:uppercase}
+    h1{font:700 clamp(46px,7vw,82px)/.98 "Space Grotesk";margin:20px 0}
+    h1 span{background:linear-gradient(90deg,var(--cyan),#fff,var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent}
+    .hero p{font-size:18px;color:var(--muted);max-width:670px}
+    .cta{display:flex;gap:13px;flex-wrap:wrap;margin-top:30px}.btn{padding:13px 20px;border-radius:12px;font-weight:700;border:1px solid var(--line);transition:.25s}
+    .btn.primary{background:linear-gradient(90deg,var(--cyan),var(--violet));color:#071019;border:0;box-shadow:0 12px 40px rgba(40,240,255,.18)}
+    .btn:hover{transform:translateY(-3px)} .btn.secondary{background:rgba(255,255,255,.04)}
+    .portrait-wrap{position:relative;display:grid;place-items:center}
+    .glow{position:absolute;width:90%;height:90%;background:linear-gradient(135deg,var(--cyan),var(--pink));filter:blur(70px);opacity:.18}
+    .portrait{position:relative;width:min(410px,100%);aspect-ratio:4/5;object-fit:cover;border-radius:32px;border:1px solid rgba(255,255,255,.16);box-shadow:var(--shadow);object-position:center top}
+    .floating{position:absolute;bottom:28px;left:-25px;padding:15px 18px;border:1px solid var(--line);background:rgba(10,14,27,.84);backdrop-filter:blur(15px);border-radius:16px;box-shadow:var(--shadow)}
+    .floating strong{display:block;font-size:20px;color:var(--cyan)}.floating small{color:var(--muted)}
+    section{padding:105px 0}.section-head{margin-bottom:45px}.kicker{color:var(--cyan);font-size:12px;font-weight:800;letter-spacing:1.6px;text-transform:uppercase}.section-head h2{font:700 clamp(32px,4vw,50px)/1.1 "Space Grotesk";margin:8px 0}.section-head p{color:var(--muted);max-width:650px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.02));border:1px solid var(--line);border-radius:22px;padding:28px;box-shadow:var(--shadow)}
+    .card:hover{border-color:rgba(40,240,255,.35);transform:translateY(-4px);transition:.25s}.icon{font-size:28px}.card h3{margin:13px 0 7px;font-size:20px}.card p{color:var(--muted);font-size:14px}
+    .about{display:grid;grid-template-columns:.8fr 1.2fr;gap:55px;align-items:center}.about-box{padding:34px;border-radius:25px;background:linear-gradient(135deg,rgba(40,240,255,.08),rgba(255,79,216,.06));border:1px solid var(--line)}
+    .checks{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:25px}.check{color:#dfe5f5}.check::before{content:"✓";color:var(--cyan);font-weight:800;margin-right:8px}
+    .portfolio{display:grid;grid-template-columns:1fr 1fr;gap:22px}.project{overflow:hidden;padding:0}.project img{width:100%;height:310px;object-fit:cover;display:block}.project-body{padding:24px}.tag{font-size:11px;color:var(--cyan);font-weight:800;letter-spacing:1px;text-transform:uppercase}
+    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin-top:28px}.stat{padding:23px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.025)}.stat b{font:700 34px "Space Grotesk";display:block}.stat span{font-size:12px;color:var(--muted)}
+    .contact{display:grid;grid-template-columns:1fr .9fr;gap:25px}.contact-card{padding:34px;border-radius:25px;border:1px solid var(--line);background:linear-gradient(135deg,rgba(138,92,255,.10),rgba(40,240,255,.06))}
+    footer{padding:30px 0;border-top:1px solid var(--line);color:var(--muted);font-size:13px}.footer{display:flex;justify-content:space-between;gap:20px}
+    @media(max-width:850px){.hero,.about,.contact{grid-template-columns:1fr}.hero{padding-top:45px}.portrait-wrap{order:-1}.grid{grid-template-columns:1fr}.portfolio{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}.links{display:none}.menu{display:block}.nav.open .links{display:flex;position:absolute;left:4%;right:4%;top:74px;padding:20px;background:#0b1020;border:1px solid var(--line);border-radius:16px;flex-direction:column;gap:15px}.floating{left:0}}
+  </style>
+</head>
+<body>
+<nav id="nav"><div class="wrap nav">
+  <a class="brand" href="#home">REMIN<span><b>.</b></span></a>
+  <div class="links">
+    <a href="#about">About</a><a href="#services">Services</a><a href="#work">Work</a><a href="#contact">Contact</a>
+  </div>
+  <button class="menu" onclick="document.getElementById('nav').classList.toggle('open')" aria-label="Menu">☰</button>
+</div></nav>
+
+<main>
+<section class="hero" id="home"><div class="wrap" style="display:contents">
+  <div>
+    <div class="eyebrow">● Available for digital projects</div>
+    <h1>Digital growth,<br><span>designed to stand out.</span></h1>
+    <p>I’m <strong>Remin Islam</strong> — a Digital Marketer, Website Creator and YouTube Expert helping businesses build visibility, reach the right audience and grow online.</p>
+    <div class="cta"><a class="btn primary" href="#contact">Start a Project ↗</a><a class="btn secondary" href="#work">View My Work</a></div>
+  </div>
+  <div class="portrait-wrap"><div class="glow"></div><img class="portrait" src="assets/profile.jfif" alt="Remin Islam"><div class="floating"><strong>Digital Marketing</strong><small>SEO · YouTube · Social Media · Web</small></div></div>
+</div></section>
+
+<section id="about"><div class="wrap about">
+  <div class="about-box"><div class="kicker">About me</div><h2>Creative strategy meets practical execution.</h2><p style="color:var(--muted)">I focus on high-quality work, buyer satisfaction and on-time delivery. My goal is simple: turn digital channels into useful, professional business assets.</p></div>
+  <div><div class="kicker">Why work with me</div><h2>Focused on results and long-term relationships.</h2><div class="checks"><div class="check">High-quality work</div><div class="check">Buyer satisfaction</div><div class="check">On-time delivery</div><div class="check">Professional support</div><div class="check">Global audience reach</div><div class="check">Growth-focused strategy</div></div></div>
+</div></section>
+
+<section id="services"><div class="wrap">
+  <div class="section-head"><div class="kicker">Services</div><h2>What I can do for your brand.</h2><p>Practical digital solutions built around visibility, content, search and audience growth.</p></div>
+  <div class="grid">
+    <div class="card"><div class="icon">◉</div><h3>Digital Marketing</h3><p>Strategy and execution to strengthen your online presence and reach the right audience.</p></div>
+    <div class="card"><div class="icon">⌕</div><h3>SEO & Google Ranking</h3><p>Keyword research, on-page optimization and SEO-focused content designed for stronger search visibility.</p></div>
+    <div class="card"><div class="icon">▶</div><h3>YouTube SEO</h3><p>Video titles, descriptions, tags, keywords and channel optimization for better discoverability.</p></div>
+    <div class="card"><div class="icon">◎</div><h3>Social Media Marketing</h3><p>Professional social content and marketing support across major platforms.</p></div>
+    <div class="card"><div class="icon">⌘</div><h3>Website Creation</h3><p>Modern, responsive websites that present your business clearly on desktop and mobile.</p></div>
+    <div class="card"><div class="icon">✦</div><h3>Creative Design</h3><p>Visual assets for social media, campaigns, portfolios and digital brand presentation.</p></div>
+  </div>
+</div></section>
+
+<section id="work"><div class="wrap">
+  <div class="section-head"><div class="kicker">Selected work</div><h2>Creative visuals that make content memorable.</h2><p>A small showcase using the creative assets provided for this portfolio.</p></div>
+  <div class="portfolio">
+    <article class="card project"><img src="assets/youtube-project.jpeg" alt="YouTube visual project"><div class="project-body"><div class="tag">YouTube · Visual Content</div><h3>Summer Vlogs — Channel Visual</h3><p>Bright, high-energy thumbnail and channel artwork concept designed to grab attention.</p></div></article>
+    <article class="card project"><img src="assets/animation-project.jpeg" alt="Dynamic media carousel project"><div class="project-body"><div class="tag">Motion · Presentation</div><h3>Dynamic Media Carousel</h3><p>Modern neon interface concept for presenting video, image and brand content with impact.</p></div></article>
+  </div>
+  <div class="stats">
+    <div class="stat"><b>SEO</b><span>Search visibility</span></div><div class="stat"><b>YT</b><span>YouTube optimization</span></div><div class="stat"><b>WEB</b><span>Responsive websites</span></div><div class="stat"><b>SMM</b><span>Social media marketing</span></div>
+  </div>
+</div></section>
+
+<section id="contact"><div class="wrap contact">
+  <div><div class="kicker">Let’s work together</div><h2 style="font:700 clamp(38px,5vw,62px)/1.05 'Space Grotesk';margin:10px 0 15px">Have a project in mind?</h2><p style="color:var(--muted);max-width:580px">Tell me what you want to build, promote or improve. I’ll bring a focused digital approach and professional delivery.</p></div>
+  <div class="contact-card"><h3>Start a conversation</h3><p style="color:var(--muted)">For services, portfolio work and project inquiries, visit my Fiverr profile or GitHub.</p><div class="cta"><a class="btn primary" href="https://www.fiverr.com/reminislam" target="_blank" rel="noopener">Fiverr Profile ↗</a><a class="btn secondary" href="https://github.com/reminislam896/Digital-Marketer" target="_blank" rel="noopener">GitHub ↗</a></div></div>
+</div></section>
+</main>
+<footer><div class="wrap footer"><span>© <span id="year"></span> Remin Islam. All rights reserved.</span><span>Digital Marketer · Website Creator · YouTube Expert</span></div></footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
